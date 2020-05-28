@@ -1,8 +1,8 @@
 package com.AddressBook;
 
-public class AddressBook implements AddressBookInterface{
+public abstract class AddressBook implements AddressBookInterface {
     @Override
-    public String addPersonData() {
+    public String addPersonRecord() {
         return null;
     }
 }

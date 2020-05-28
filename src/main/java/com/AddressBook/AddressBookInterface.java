@@ -1,5 +1,7 @@
 package com.AddressBook;
 
 public interface AddressBookInterface {
-    public String addPersonData();
+    public String addPersonRecord(Person person, String file_path);
+
+    String addPersonRecord();
 }

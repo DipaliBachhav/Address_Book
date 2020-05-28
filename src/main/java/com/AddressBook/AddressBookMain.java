@@ -1,16 +1,22 @@
 package com.AddressBook;
 
-import java.io.IOException;
+
 
 public class AddressBookMain {
-    public String addressBook(Person person, String file_path, String create_file) throws IOException {
+
+    public String addressBook(Person person, String file_path, String choice) throws AddressBookException {
         IAddressBookController controller = AddressBookFactory.createControllerInterface();
-        AddressBookInterface addressBook = AddressBookFactory.createAddressBookInterface();
-        switch (create_file){
+        AddressBookInterface addressBook=AddressBookFactory.createAddressBookInterface();
+            switch (choice) {
             case "addressBook":
                 return controller.createNewAddressBook(file_path);
+                case "addRecord":
+                    return addressBook.addPersonRecord();
+            default: {
+                throw new AddressBookException(AddressBookException.Exception_Type.WRONG_CHOICE, "Enter Right Choice");
+            }
         }
-        return null;
     }
 }
+
 

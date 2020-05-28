@@ -11,4 +11,14 @@ repositories {
 
 dependencies {
     testCompile group: 'junit', name: 'junit', version: '4.12'
+    compile 'com.google.code.gson:gson:2.2.+'
 }
+/*dependencies{
+    testCompile group: 'com.fasterxml.jackson.core',artifact: 'jackson-annotations', version:'2.2.2'
+}
+dependencies {
+    testCompile group:'com.fasterxml.jackson.core',artifact:  'jackson-core', version: '2.2.2'
+}
+dependencies {
+        testCompile group:'com.fasterxml.jackson.core',artifact:'jackson-databind',version:'2.2.2'
+}*/

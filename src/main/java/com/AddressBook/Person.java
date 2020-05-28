@@ -11,6 +11,9 @@ public class Person {
     public Person() {
     }
 
+    public Person(String FirstName, String lastName, String city, String state, String zip) {
+    }
+
     public Person(String firstName, String lastName, String city, String state, String zip, String phoneNumber) {
         this.firstName = firstName;
         this.lastName = lastName;
@@ -18,5 +21,16 @@ public class Person {
         this.state = state;
         this.zip = zip;
         this.phoneNumber = phoneNumber;
+    }
+
+    @Override
+    public String toString() {
+        return "Person{" +
+                "firstName='" + firstName + '\'' +
+                ", lastName='" + lastName + '\'' +
+                ", city='" + city + '\'' +
+                ", state='" + state + '\'' +
+                ", zip='" + zip + '\'' +
+                '}';
     }
 }
