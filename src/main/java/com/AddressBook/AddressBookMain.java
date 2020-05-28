@@ -1,7 +1,5 @@
 package com.AddressBook;
 
-
-
 public class AddressBookMain {
 
     public String addressBook(Person person, String file_path, String choice) throws AddressBookException {
@@ -11,8 +9,8 @@ public class AddressBookMain {
             case "addressBook":
                 return controller.createNewAddressBook(file_path);
                 case "addRecord":
-                    return addressBook.addPersonRecord();
-            default: {
+                    return addressBook.addPersonRecord(person, file_path);
+                    default: {
                 throw new AddressBookException(AddressBookException.Exception_Type.WRONG_CHOICE, "Enter Right Choice");
             }
         }
