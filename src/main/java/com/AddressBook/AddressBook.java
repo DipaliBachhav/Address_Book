@@ -15,6 +15,9 @@ public class AddressBook implements AddressBookInterface {
     /*public String addPersonRecord() {
         return null;
     }*/
+            File file;
+            ObjectMapper mapper = new ObjectMapper();
+
     public String addPersonRecord(Person person, String file_path) {
         try {
             File file = new File(file_path);
@@ -29,6 +32,11 @@ public class AddressBook implements AddressBookInterface {
         }
         return null;
     }
+
+    public void saveRecord(List<Person> list) throws IOException {
+        mapper.writeValue(file, list);
+    }
+
     public List readFile(String file_path) throws IOException {
         FileReader file = new FileReader(new File(file_path));
         ObjectMapper objectMapper = new ObjectMapper();
